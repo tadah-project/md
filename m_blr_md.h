@@ -2,10 +2,10 @@
 #define M_BLR_MD_H
 
 #include "m_md_base.h"
-#include "MODELS/m_blr_core.h"
-#include "CORE/config/config.h"
-#include "CORE/normaliser_core.h"
-#include "MODELS/functions/function_base.h"
+#include "../MODELS/m_blr_core.h"
+#include "../CORE/config/config.h"
+#include "../CORE/normaliser_core.h"
+#include "../MODELS/functions/function_base.h"
 
 #include <iostream>
 
@@ -25,15 +25,15 @@ class M_BLR_MD: private M_BLR_Core<BF>, public M_MD_Base {
         norm = Normaliser_Core(c);
     }
 
-        double epredict(const aed_type2 &aed) {
+        double epredict(const aed_type2 &aed) const{
             return M_BLR_Core<BF>::bf.epredict(M_BLR_Core<BF>::weights,aed);
         };
 
-        double fpredict(const fd_type &fdij, const aed_type2 &aedi, const size_t k) {
+        double fpredict(const fd_type &fdij, const aed_type2 &aedi, const size_t k) const {
             return M_BLR_Core<BF>::bf.fpredict(M_BLR_Core<BF>::weights,fdij,aedi,k);
         }
 
-        force_type fpredict(const fd_type &fdij, const aed_type2 &aedi) {
+        force_type fpredict(const fd_type &fdij, const aed_type2 &aedi) const {
             return M_BLR_Core<BF>::bf.fpredict(M_BLR_Core<BF>::weights,fdij,aedi);
         }
 };

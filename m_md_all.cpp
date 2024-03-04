@@ -1,4 +1,4 @@
-#include "CORE/registry.h"
+#include "../CORE/registry.h"
 #include "m_md_base.h"
 #include "m_blr_md.h"
 #include "m_krr_md.h"
