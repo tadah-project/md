@@ -4,7 +4,7 @@ file(GLOB tests_src "*.cpp")
 
 add_executable(test_md ${tests_src})
 target_link_libraries(test_md PRIVATE 
-    Catch2 tadah.md tadah.core tadah.models config::rc) 
+    Catch2 tadah.md tadah.core tadah.models) 
 
 include(Catch.cmake)
 catch_discover_tests(test_md)
