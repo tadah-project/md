@@ -61,6 +61,7 @@ file(GLOB MD_SRC CONFIGURE_DEPENDS "*.cpp" "*.h" "*.hpp")
 add_library(tadah.md.obj OBJECT
     ${MD_SRC}
     )
+target_link_libraries(tadah.md.obj PUBLIC config::rc)
 
 if(TADAH_ENABLE_OPENMP)
     find_package(OpenMP REQUIRED)
