@@ -1,4 +1,5 @@
-#include "m_md_base.h"
+#include <tadah/md/m_md_base.h>
+
 M_MD_Base::~M_MD_Base() {}
 double M_MD_Dummy::epredict(const aed_type2 &) const
 { return 0.0; }

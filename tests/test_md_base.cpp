@@ -1,6 +1,6 @@
 #include "catch2/catch.hpp"
-#include "../../CORE/core_types.h"
-#include "../m_md_base.h"
+#include <tadah/core/core_types.h>
+#include <tadah/md/m_md_base.h>
 
 TEST_CASE( "Testing M_MD_Base Constructor 1", "[M_MD_Base()]" ) {
     M_MD_Dummy m;

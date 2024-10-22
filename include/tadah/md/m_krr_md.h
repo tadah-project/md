@@ -1,11 +1,11 @@
 #ifndef M_KRR_MD_H
 #define M_KRR_MD_H
 
-#include "m_md_base.h"
-#include "../MODELS/m_krr_core.h"
-#include "../CORE/config/config.h"
-#include "../CORE/normaliser_core.h"
-#include "../MODELS/functions/function_base.h"
+#include <tadah/md/m_md_base.h>
+#include <tadah/core/config.h>
+#include <tadah/core/normaliser_core.h>
+#include <tadah/models/m_krr_core.h>
+#include <tadah/models/functions/function_base.h>
 
 #include <iostream>
 

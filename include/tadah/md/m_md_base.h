@@ -1,10 +1,10 @@
 #ifndef M_MD_BASE_H
 #define M_MD_BASE_H
 
-#include "../CORE/normaliser_core.h"
-#include "../CORE/core_types.h"
-#include "../MODELS/functions/function_base.h"
-#include "../MODELS/m_predict.h"
+#include <tadah/core/core_types.h>
+#include <tadah/core/normaliser_core.h>
+#include <tadah/models/functions/function_base.h>
+#include <tadah/models/m_predict.h>
 
 class M_MD_Base: public M_Predict {
 
