@@ -1,7 +1,7 @@
-#include "../CORE/registry.h"
-#include "m_md_base.h"
-#include "m_blr_md.h"
-#include "m_krr_md.h"
+#include <tadah/core/registry.h>
+#include <tadah/md/m_md_base.h>
+#include <tadah/md/m_blr_md.h>
+#include <tadah/md/m_krr_md.h>
 
 template<> CONFIG::Registry<M_MD_Base,Function_Base&,Config&>::Map CONFIG::Registry<M_MD_Base,Function_Base&,Config&>::registry{};
 
