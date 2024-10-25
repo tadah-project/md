@@ -84,7 +84,7 @@ if(TADAH_BUILD_TESTS)
 endif()
 
 # Installation rules
-install(TARGETS tadah.models
+install(TARGETS tadah.md
         RUNTIME DESTINATION bin
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib)
