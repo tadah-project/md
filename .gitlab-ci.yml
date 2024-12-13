@@ -47,3 +47,4 @@ trigger_job:
   stage: trigger
   trigger:
     project: tadah/tadah.lammps
+    branch: $CI_COMMIT_REF_NAME
