@@ -14,10 +14,10 @@ class M_MD_Base: public M_Predict {
 };
 
 struct M_MD_Dummy: public M_MD_Base {
-    double epredict(const aed_type2 &) const;
-    double fpredict(const fd_type &, const aed_type2 &, size_t ) const;
+    double epredict(const aed_type &) const;
+    double fpredict(const fd_type &, const aed_type &, size_t ) const;
     force_type fpredict(const fd_type &,
-            const aed_type2 &) const;
+            const aed_type &) const;
 };
 // c++17 solution...
 //template<> inline Registry<M_MD_Base,Function_Base&,Config&>::Map Registry<M_MD_Base,Function_Base&,Config&>::registry{};

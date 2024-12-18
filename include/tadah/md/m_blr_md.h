@@ -25,15 +25,15 @@ class M_BLR_MD: private M_BLR_Core<BF>, public M_MD_Base {
         norm = Normaliser_Core(c);
     }
 
-        double epredict(const aed_type2 &aed) const{
+        double epredict(const aed_type &aed) const{
             return M_BLR_Core<BF>::bf.epredict(M_BLR_Core<BF>::weights,aed);
         };
 
-        double fpredict(const fd_type &fdij, const aed_type2 &aedi, const size_t k) const {
+        double fpredict(const fd_type &fdij, const aed_type &aedi, const size_t k) const {
             return M_BLR_Core<BF>::bf.fpredict(M_BLR_Core<BF>::weights,fdij,aedi,k);
         }
 
-        force_type fpredict(const fd_type &fdij, const aed_type2 &aedi) const {
+        force_type fpredict(const fd_type &fdij, const aed_type &aedi) const {
             return M_BLR_Core<BF>::bf.fpredict(M_BLR_Core<BF>::weights,fdij,aedi);
         }
 };
