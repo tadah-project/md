@@ -25,15 +25,15 @@ class M_KRR_MD: private M_KRR_Core<K>, public M_MD_Base {
         norm = Normaliser_Core(c);
     }
 
-        double epredict(const aed_type2 &aed) const {
+        double epredict(const aed_type &aed) const {
             return M_KRR_Core<K>::kernel.epredict(M_KRR_Core<K>::weights,aed);
         };
 
-        double fpredict(const fd_type &fdij, const aed_type2 &aedi, const size_t k) const {
+        double fpredict(const fd_type &fdij, const aed_type &aedi, const size_t k) const {
             return M_KRR_Core<K>::kernel.fpredict(M_KRR_Core<K>::weights,fdij,aedi,k);
         }
 
-        force_type fpredict(const fd_type &fdij, const aed_type2 &aedi) const {
+        force_type fpredict(const fd_type &fdij, const aed_type &aedi) const {
             return M_KRR_Core<K>::kernel.fpredict(M_KRR_Core<K>::weights,fdij,aedi);
         }
 };
