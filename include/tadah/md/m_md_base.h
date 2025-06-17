@@ -6,19 +6,24 @@
 #include <tadah/models/functions/function_base.h>
 #include <tadah/models/m_predict.h>
 
-class M_MD_Base: public M_Predict {
+namespace tadah {
+namespace md {
+
+class M_MD_Base: public models::M_Predict {
 
     public:
-        Normaliser_Core norm;    // TODO?
+      core::Normaliser_Core norm;    // TODO?
         virtual ~M_MD_Base();
 };
 
 struct M_MD_Dummy: public M_MD_Base {
-    double epredict(const aed_type &) const;
-    double fpredict(const fd_type &, const aed_type &, size_t ) const;
-    force_type fpredict(const fd_type &,
-            const aed_type &) const;
+    double epredict(const core::aed_type &) const;
+    double fpredict(const core::fd_type &, const core::aed_type &, size_t ) const;
+    core::force_type fpredict(const core::fd_type &,
+            const core::aed_type &) const;
 };
+} // namespace md
+} // namespace tadah
 // c++17 solution...
 //template<> inline Registry<M_MD_Base,Function_Base&,Config&>::Map Registry<M_MD_Base,Function_Base&,Config&>::registry{};
 #endif

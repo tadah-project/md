@@ -2,6 +2,9 @@
 #include <tadah/core/core_types.h>
 #include <tadah/md/m_md_base.h>
 
+using namespace tadah::core;
+using namespace tadah::md;
+
 TEST_CASE( "Testing M_MD_Base Constructor 1", "[M_MD_Base()]" ) {
     M_MD_Dummy m;
 }
