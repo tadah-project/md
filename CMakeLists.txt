@@ -131,8 +131,9 @@ if(TADAH_ENABLE_OPENMP)
   target_link_libraries(tadah.md PUBLIC OpenMP::OpenMP_CXX)
 endif()
 
-if(TADAH_BUILD_TESTS)
-  include(CTest) 
+set(BUILD_TESTING OFF CACHE BOOL "Build tests")
+include(CTest)
+if(BUILD_TESTING)
   add_subdirectory(tests)
 endif()
 
