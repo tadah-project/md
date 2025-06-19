@@ -84,9 +84,11 @@ endif()
 
 # Installation rules
 install(TARGETS tadah.md
+        EXPORT  tadahMDTargets
         RUNTIME DESTINATION bin
         LIBRARY DESTINATION lib
         ARCHIVE DESTINATION lib)
-install(DIRECTORY include/
-    DESTINATION include
-)
+install(DIRECTORY include/ DESTINATION include)
+install(EXPORT tadahMDTargets
+        NAMESPACE tadah::
+        DESTINATION lib/cmake/tadah.md)
