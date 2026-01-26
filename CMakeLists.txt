@@ -13,9 +13,16 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-# default build type for single-config generators (Ninja/Make)
+# Default build type for single-config generators (Ninja/Unix Makefiles).
+set(TADAH_DEFAULT_BUILD_TYPE "RelWithDebInfo" CACHE STRING
+    "Default build type for single-config generators when CMAKE_BUILD_TYPE is not set.")
+
 if(NOT CMAKE_CONFIGURATION_TYPES AND NOT CMAKE_BUILD_TYPE)
-  set(CMAKE_BUILD_TYPE RelWithDebInfo CACHE STRING "" FORCE)
+  message(STATUS "CMAKE_BUILD_TYPE not set; defaulting to ${TADAH_DEFAULT_BUILD_TYPE}")
+  set(CMAKE_BUILD_TYPE "${TADAH_DEFAULT_BUILD_TYPE}" CACHE STRING
+      "Choose the type of build (Debug, Release, RelWithDebInfo, MinSizeRel).")
+  set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS
+      "Debug" "Release" "RelWithDebInfo" "MinSizeRel")
 endif()
 
 if(BUILD_SHARED_LIBS)
@@ -51,14 +58,14 @@ endif()
 tadah_use_local_module(Tadah.MODELS MODELS)  # FetchContent name + folder name
 
 # 3. Git branch information, for informational purposes 
-tadah_get_git_branch(GIT_BRANCH)
-message(STATUS "${PROJECT_NAME} module is using GIT_BRANCH: ${GIT_BRANCH}")
+tadah_get_git_branch(TADAH_GIT_BRANCH)
+message(STATUS "${PROJECT_NAME} module is using TADAH_GIT_BRANCH) ${TADAH_GIT_BRANCH)")
 
 #4. Fetch Tadah! modules
 FetchContent_Declare(
     Tadah.MODELS
     GIT_REPOSITORY https://git.ecdf.ed.ac.uk/tadah/models.git
-    GIT_TAG ${GIT_BRANCH}
+    GIT_TAG ${TADAH_GIT_BRANCH)
 )
 FetchContent_MakeAvailable(Tadah.MODELS)
 
