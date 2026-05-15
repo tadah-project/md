@@ -24,6 +24,7 @@ A small module with mostly cross-cutting build / infrastructure updates.
 - Substantive README rewrite (Session B).
 - Community / governance pointer files added.
 - CI/CD: lint + release stages, VERSION wired from blueprint TOML.
+- Test build routed through `cmake-tools/cmake/TadahTesting.cmake` helpers (`tadah_declare_testing` / `tadah_add_tests`).
 
 ## [1.2.0] and earlier (condensed)
 
