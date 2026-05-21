@@ -6,7 +6,7 @@
 # MD
 
 Molecular-dynamics specialisation layer of the
-[Tadah!](https://tadah.readthedocs.io/) MLIP toolchain. Provides:
+[Tadah!](https://tadah.readthedocs.io/develop/) MLIP toolchain. Provides:
 
 - `M_KRR_MD` — KRR regressor optimised for the access pattern of the
   MD evaluation kernel.
@@ -29,7 +29,7 @@ fetched automatically (via CMake `FetchContent`) by
 the umbrella project
 [Tadah!MLIP](https://git.ecdf.ed.ac.uk/tadah/tadah.mlip) or Tadah!LAMMPS
 — see the
-[installation guide](https://tadah.readthedocs.io/en/latest/installation.html).
+[installation guide](https://tadah.readthedocs.io/develop/installation.html).
 
 ## Contributing
 
