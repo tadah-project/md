@@ -73,7 +73,7 @@ lint_codespell:
         }
       fi
       export PATH="$HOME/.local/bin:$PATH"
-      codespell --skip='./build*,./external,./_deps,./tests/data,./tests/catch2' --ignore-words-list='re-use,re-uses,re-used,nd,SEH' || true
+      codespell --skip='./build*,./external,./_deps,./tests/data' --ignore-words-list='re-use,re-uses,re-used,nd,SEH' || true
   allow_failure: true
 
 # ---- Source-tarball release (tag-gated) --------------------------------
