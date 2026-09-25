@@ -5,12 +5,13 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
-## [1.5.1] — 2026-09-23
+## [1.6.0] — 2026-09-25
 
 ### Changed
-- Framework version `1.5.1`, read from CORE's `blueprint/blueprint_tadah.toml` after the Tadah dependencies are fetched, so the module reports the right version in every layout (sibling checkout or FetchContent). A missing blueprint is now a configure error instead of a silent `0.0.0`.
+- Framework version `1.6.0`, read from CORE's `blueprint/blueprint_tadah.toml` after the Tadah dependencies are fetched, so the module reports the right version in every layout (sibling checkout or FetchContent). A missing blueprint is now a configure error instead of a silent `0.0.0`.
 - Tests take Catch2 and its test discovery from cmake-tools (`tadah_setup_tests()`, `include(Catch)`); the vendored `tests/catch2/catch.hpp`, `tests/Catch.cmake` and `tests/CatchAddTests.cmake` are removed. Every discovered CTest entry now selects exactly its own test case and passes `--warn NoTests`, so an entry that matches no test case fails instead of passing. New test sources are picked up without a manual re-configure (`CONFIGURE_DEPENDS`).
 - cmake-tools is fetched at `v1-dev` instead of `main`.
+- The README badges and links and the pointers to the umbrella's community files (`CITATION.md`, `CONTRIBUTING.md`, …) point to the `v1-dev` line: GitLab `v1-dev`, `https://tadah.readthedocs.io/v1-dev/`. They pointed to `develop`.
 
 ## [1.4.0] — 2026-07-14
 
