@@ -10,3 +10,9 @@ target_link_libraries(test_md PRIVATE
 
 include(Catch)
 catch_discover_tests(test_md)
+
+# tadah.md_headers (ctest -L headers): every header of include/
+# compiles on its own and twice in a row (cmake-tools'
+# tadah_add_header_check). Before the fix: passes as well (a pin: no MD
+# header failed when the check was added).
+tadah_add_header_check(tadah.md)
