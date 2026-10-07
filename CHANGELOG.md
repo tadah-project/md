@@ -5,6 +5,9 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+### Added
+- Tests: `tadah.md_headers` (`ctest -L headers`, cmake-tools' `tadah_add_header_check`) compiles every header of `include/` on its own and twice in a row, with what a user of `tadah.md` gets. Every MD header passes.
+
 ## [1.6.0] — 2026-09-25
 
 ### Changed
