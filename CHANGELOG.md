@@ -9,6 +9,7 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ### Added
 - Tests: `tadah.md_headers` (`ctest -L headers`, cmake-tools' `tadah_add_header_check`) compiles every header of `include/` on its own and twice in a row, with what a user of `tadah.md` gets. Every MD header passes.
+- Tests: `tadah.md_text` (`ctest -L text`, cmake-tools' `tadah_add_text_check`) reads the text files of the repository (those git tracks or would track, in a clone) and fails on a line that carries a person's initials, a reference to co-workers, a decision attributed to the code's owner, the name of an AI tool, a note kept outside the repository or filler wording.
 
 ### Changed
 - Framework version `1.6.0`, read from CORE's `blueprint/blueprint_tadah.toml` after the Tadah dependencies are fetched, so the module reports the right version in every layout (sibling checkout or FetchContent). A missing blueprint is now a configure error instead of a silent `0.0.0`.
