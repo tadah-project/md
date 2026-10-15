@@ -34,7 +34,7 @@ A small module with mostly cross-cutting build / infrastructure updates.
 - `TADAH_ENABLE_ASAN` CMake option.
 
 ### Internal
-- Substantive README rewrite (Session B).
+- Substantive README rewrite.
 - Community / governance pointer files added.
 - CI/CD: lint + release stages, VERSION wired from blueprint TOML.
 - Test build routed through `cmake-tools/cmake/TadahTesting.cmake` helpers (`tadah_declare_testing` / `tadah_add_tests`).
