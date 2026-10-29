@@ -1,7 +1,5 @@
-[![pipeline](https://git.ecdf.ed.ac.uk/tadah/md/badges/v1-dev/pipeline.svg)](https://git.ecdf.ed.ac.uk/tadah/md/-/commits/v1-dev)
-[![coverage](https://git.ecdf.ed.ac.uk/tadah/md/badges/v1-dev/coverage.svg)](https://git.ecdf.ed.ac.uk/tadah/md/-/commits/v1-dev)
 [![license](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](LICENSE)
-[![version](https://img.shields.io/badge/version-1.6.0-blue.svg)](https://git.ecdf.ed.ac.uk/tadah/md/-/tags)
+[![version](https://img.shields.io/badge/version-1.6.0-blue.svg)](https://github.com/tadah-project/md/tags)
 
 # MD
 
@@ -15,7 +13,7 @@ Molecular-dynamics specialisation layer of the
 
 These specialisations strip away analysis-only code paths from the
 generic `M_KRR` / `M_BLR` regressors in
-[MODELS](https://git.ecdf.ed.ac.uk/tadah/models) so the LAMMPS
+[MODELS](https://github.com/tadah-project/models) so the LAMMPS
 plugin and any other on-line evaluator can run the inner loop without
 the overhead of training-time bookkeeping.
 
@@ -23,11 +21,11 @@ the overhead of training-time bookkeeping.
 
 MD is an internal module of the Tadah! MLIP toolchain. It is
 fetched automatically (via CMake `FetchContent`) by
-[Tadah!LAMMPS](https://git.ecdf.ed.ac.uk/tadah/tadah.lammps) (the
+[Tadah!LAMMPS](https://github.com/tadah-project/tadah.lammps) (the
 `pair_style tadah` implementation) and by
-[HPO](https://git.ecdf.ed.ac.uk/tadah/hpo). End users install
+[HPO](https://github.com/tadah-project/hpo). End users install
 the umbrella project
-[Tadah!MLIP](https://git.ecdf.ed.ac.uk/tadah/tadah.mlip) or Tadah!LAMMPS
+[Tadah!MLIP](https://github.com/tadah-project/tadah.mlip) or Tadah!LAMMPS
 — see the
 [installation guide](https://tadah.readthedocs.io/v1-dev/installation.html).
 
@@ -43,8 +41,9 @@ GPL-3.0; see [LICENSE](LICENSE).
 
 ## Reporting issues
 
-Bugs and feature requests:
-[MD issues](https://git.ecdf.ed.ac.uk/tadah/md/-/issues).
-For end-user questions please use the umbrella project
-[Tadah!MLIP](https://git.ecdf.ed.ac.uk/tadah/tadah.mlip) or
-[Tadah!LAMMPS](https://git.ecdf.ed.ac.uk/tadah/tadah.lammps).
+This repository is a component of Tadah! and has no issue tracker of
+its own. Bugs, feature requests and questions go to the tracker of
+the umbrella project,
+[Tadah!MLIP](https://github.com/tadah-project/tadah.mlip/issues)
+or, for the LAMMPS plugin, the tracker of
+[Tadah!LAMMPS](https://github.com/tadah-project/tadah.lammps/issues).
